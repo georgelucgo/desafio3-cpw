@@ -1,0 +1,266 @@
+$cor-primaria: #1e20b4;
+$cor-adicionar: #10b981;
+$cor-visualizar: #17559b;
+$cor-deletar: #9a0909;
+
+$cor-fundo-claro: #f8fafc;
+$cor-card-claro: #ffffff;
+$cor-texto-claro: #0f172a;
+
+$cor-fundo-escuro: #0f172a;
+$cor-card-escuro: #1e293b;
+$cor-texto-escuro: #e2e8f0;
+
+$cor-borda-clara: #e2e8f0;
+$cor-borda-escura: #334155;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+ .titulo {
+    text-align: center;
+  }
+
+//claro
+.claro {
+  color: $cor-texto-claro;
+
+  .header-container {
+    background: #fff;
+    margin-bottom: 80px;
+  }
+
+
+
+
+ 
+  .container {
+    background: linear-gradient(to bottom, #ffffff, #d6d6d6);
+    border-radius: 32px;
+    box-shadow: 1px 2px 9px 3px gray
+  }
+
+  .card {
+    background: $cor-card-claro;
+    border: 1px solid $cor-borda-clara;
+  }
+
+  .input-tarefa {
+    background: white;
+    border: 1px solid $cor-borda-clara;
+    color: $cor-texto-claro;
+  }
+
+  .modal {
+    background: $cor-card-claro;
+    color: $cor-texto-claro;
+  }
+}
+
+//escuro
+.escuro {
+  color: $cor-texto-escuro;
+
+  .header-container {
+    background: linear-gradient(to right, #1e293b, #0f172a);
+
+    margin-bottom: 80px;
+  }
+
+  .container {
+    background-color: #1E293B;
+    border-radius: 32px;
+    box-shadow: 1px 2px 9px 3px gray
+  }
+
+  .card {
+    background: #384A66;
+    border: 1px solid $cor-borda-escura;
+  }
+
+  .input-tarefa {
+    background: #384A66;
+    border: 1px solid $cor-borda-escura;
+    color: $cor-texto-escuro;
+  }
+
+  .input-tarefa::placeholder{
+    color: #e2e8f0
+  }
+  
+  .modal {
+    background: $cor-card-escuro;
+    color: $cor-texto-escuro;
+  }
+}
+
+
+.area-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 30px 0;
+}
+
+.input-tarefa {
+  flex: 1;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  width: 100%;
+}
+
+
+.botao {
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #1e293b;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 16px;
+}
+
+
+.botao:hover {
+  opacity: 0.85;
+}
+
+.botao-tema {
+  background: $cor-primaria;
+}
+
+.botao-adicionar {
+  background: $cor-adicionar;
+}
+
+.botao-visualizar {
+  background: $cor-visualizar;
+}
+
+.botao-remover {
+  background: $cor-deletar;
+}
+
+//cardss
+.card {
+  width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+}
+
+//modal
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-conteudo {
+  overflow-y: auto;
+  max-height: 50vh;
+  padding-right: 10px;
+}
+
+.modal p {
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+//btn mudar tema
+
+.container h1,
+.container h2 {
+  margin-bottom: 15px;
+}
+
+
+
+.calendar-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.react-calendar{
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.data-selecionada{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.botao:hover{
+  transform: translateY(-2px);
+}
+
+.card:hover{
+  transform: scale(1.02);
+  transition: 0.2s;
+}
