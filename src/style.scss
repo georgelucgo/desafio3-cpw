@@ -1,5 +1,5 @@
 $cor-primaria: #1e20b4;
-$cor-adicionar: #10b981;
+$cor-adicionar: #494949;
 $cor-visualizar: #17559b;
 $cor-deletar: #9a0909;
 
@@ -47,9 +47,9 @@ body,
   margin-bottom: 20px;
 }
 
- .titulo {
-    text-align: center;
-  }
+.titulo {
+  text-align: center;
+}
 
 //claro
 .claro {
@@ -63,7 +63,7 @@ body,
 
 
 
- 
+
   .container {
     background: linear-gradient(to bottom, #ffffff, #d6d6d6);
     border-radius: 32px;
@@ -114,10 +114,10 @@ body,
     color: $cor-texto-escuro;
   }
 
-  .input-tarefa::placeholder{
+  .input-tarefa::placeholder {
     color: #e2e8f0
   }
-  
+
   .modal {
     background: $cor-card-escuro;
     color: $cor-texto-escuro;
@@ -142,7 +142,7 @@ body,
 
 
 .botao {
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
@@ -203,6 +203,7 @@ body,
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(4px);
+  z-index: 999;
 }
 
 .modal {
@@ -214,6 +215,7 @@ body,
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 1000;
 }
 
 .modal-conteudo {
@@ -236,31 +238,31 @@ body,
 
 
 
-.calendar-container{
+.calendar-container {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
 
-.react-calendar{
+.react-calendar {
   border: none;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   font-family: 'Segoe UI', sans-serif;
 }
 
-.data-selecionada{
+.data-selecionada {
   text-align: center;
   margin-top: 20px;
   font-size: 18px;
 }
 
-.botao:hover{
+.botao:hover {
   transform: translateY(-2px);
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.02);
   transition: 0.2s;
 }

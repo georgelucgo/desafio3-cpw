@@ -7,8 +7,8 @@ import App from "./App";
 import Componentes from "./components/Componentes";
 import Header from "./components/Header";
 
-import fundo from "./assets/fundo.jpg";
-import fundoDark from "./assets/fundo-dark.jpg";
+import fundo from "./assets/fundo.png";
+import fundoDark from "./assets/fundo-dark.png";
 import Calendario from "./components/Calendario";
 
 
@@ -22,12 +22,12 @@ function Root() {
         style={{
           minHeight: "100vh",
           backgroundImage: `url(${temaEscuro ? fundoDark : fundo})`,
-
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           position: "relative",
           paddingTop: "30px",
+          zIndex: 1
         }}
       >
         <Header temaEscuro={temaEscuro} setTemaEscuro={setTemaEscuro} />
@@ -36,7 +36,7 @@ function Root() {
           <Route path="/" element={<App temaEscuro={temaEscuro} />} />
           <Route path="/calendario" element={<Calendario temaEscuro={temaEscuro} />} />
          
-         
+
         </Routes>
       </div>
     </BrowserRouter>
